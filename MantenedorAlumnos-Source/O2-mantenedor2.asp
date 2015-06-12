@@ -25,8 +25,8 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 <script language="javascript">
 function volver()
 {
-	document.form1.action="mantenedor1.asp"
-	document.form1.submit();
+	document.location.href="O2-mantenedor1.asp"
+	
 }
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
