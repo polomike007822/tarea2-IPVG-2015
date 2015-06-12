@@ -3,18 +3,19 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 	RUT = REQUEST.QUERYSTRING("RUT") 		
 	NOMBRES = REQUEST.QUERYSTRING("NOMBRES")
 	MAIL = REQUEST.QUERYSTRING("MAIL")
-	
-	if (RUT<>"") then
+	DIRECCION = REQUEST.QUERYSTRING("DIRECCION")
+	if (RUT<>"" AND NOMBRES<>"" AND MAIL<>"" AND DIRECCION<>"") then
 	
 	
 	SQL = "INSERT INTO mantencion.dbo.alumnos " & _
-				"(RUT, NOMBRES, MAIL) " & _
+				"(RUT, NOMBRE, MAIL, DIRECCION) " & _
 				"VALUES " & _
-				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "')" 
+				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "', '"&DIRECCION&"')" 
 			Conn.execute(SQL)
 			RUT = ""
 			NOMBRES = ""
 			MAIL = ""
+			DIRECCION = ""
 	end if
 %>
 
