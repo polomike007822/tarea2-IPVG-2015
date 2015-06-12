@@ -1,5 +1,5 @@
 <%Set Conn= Server.CreateObject("ADODB.connection")
-Conn.Open = "dsn=mantencion;uid=invitado;pwd=pass;"
+Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 	RUT = REQUEST.QUERYSTRING("RUT") 		
 	NOMBRES = REQUEST.QUERYSTRING("NOMBRES")
 	MAIL = REQUEST.QUERYSTRING("MAIL")
