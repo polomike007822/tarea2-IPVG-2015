@@ -10,7 +10,7 @@ Conn.Open = "dsn=dsnalumnos;uid=invitado;pwd=2015;database=mantencion"
 	SQL = "INSERT INTO mantencion.dbo.alumnos " & _
 				"(RUT, NOMBRE, MAIL, DIRECCION) " & _
 				"VALUES " & _
-				"('" & RUT & "', '" & NOMBRES & "', '" & CORREO & "', '"&DIRECCION&"')" 
+				"('" & RUT & "', '" & NOMBRES & "', '" & MAIL & "', '"&DIRECCION&"')" 
 			Conn.execute(SQL)
 			RUT = ""
 			NOMBRES = ""
@@ -39,21 +39,30 @@ function volver()
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#c0c0c0">
              
     <tr align="center" valign="middle"> 
-        <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b><font face="Verdana,Arial, Helvetica, sans-serif" size="1">RUT 
+        <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b>
+				<font face="Verdana,Arial, Helvetica, sans-serif" size="1">RUT 
                 <input type="text" name="RUT" maxlength="10" size="15" class="texto">
+				<br>
                 <font face="Verdana, Arial, Helvetica, sans-serif">NOMBRES</font> 
                 <input type="text" name="NOMBRES" size="60" maxlength="50" class="texto">
-                </font></b></td>
-            </tr>
+				<br>
+                </font></b>
+		</td>
+    </tr>
             <tr align="center" valign="middle">
               <td height="25" colspan="6" nowrap bordercolor="#FFFFFF" bgcolor="#FFFFFF"><b><font face="Arial, Helvetica, sans-serif" size="1"><font face="Verdana, Arial, Helvetica, sans-serif">MAIL</font> 
-                <input type="text" name="MAIL" size="60" maxlength="50" class="texto">              
                 
+				<input type="text" name="MAIL" size="60" maxlength="50" class="texto">              
+                <br>
+				<font face="Verdana,Arial, Helvetica, sans-serif" size="1">DIRECCION
+                <input type="text" name="DIRECCION" maxlength="10" size="15" class="texto">
+				<br>
                 </font></b></td>
+				
             </tr>
-          </table>
+</table>
 		  <input type="submit" value="Insertar">
 		  <input type="button" value="Volver" onclick="volver()">
-		</form>
+</form>
 </body>
 </html>
